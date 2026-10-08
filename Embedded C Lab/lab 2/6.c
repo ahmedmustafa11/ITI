@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-
+//C program to print the prime numbers for a given range.
 int main(){
 
     int x,y,i;
@@ -11,19 +11,22 @@ int main(){
     scanf("%d", &y);
     for (int i = x; i <= y; i++)
     {
+        z = 1;
         for (int j = 2; j < i; j++)
         {
             
             if (i%j == 0)
             {
-                int z = 1;
+                z = 0;
+                break;
             }
             
+            
         }
-        if (!z)
+        if (z)
         {
-            printf("%d is a prime number",i);
-            int z = 0;
+            printf("%d is a prime number\n",i);
+           
         }
         
         
